@@ -1,0 +1,41 @@
+version: 3
+
+tasks:
+  default:
+    cmds:
+      - task --list-all
+
+  install:
+    desc: "Install dependencies"
+    cmds:
+      - opam install . --deps-only
+
+  build:
+    desc: "Build the project"
+    cmds:
+      - dune build
+
+  run-order-gateway:
+    desc: "Run the Order Gateway"
+    cmds:
+      - dune exec order-gateway
+
+  run-order-server:
+    desc: "Run the Order Server"
+    cmds:
+      - dune exec order-server
+
+  clean:
+    desc: "Clean the build artifacts"
+    cmds:
+      - dune clean
+
+  test:
+    desc: "Run the tests"
+    cmds:
+      - dune runtest
+
+  format:
+    desc: "Format the code"
+    cmds:
+      - dune build @fmt --auto-promote

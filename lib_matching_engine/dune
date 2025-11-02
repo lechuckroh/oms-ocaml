@@ -1,0 +1,3 @@
+(library
+ (name lib_matching_engine)
+ (public_name oms-ocaml.lib_matching_engine))

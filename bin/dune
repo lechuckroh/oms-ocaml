@@ -1,0 +1,8 @@
+(executable
+ (public_name order-gateway)
+ (name order_gateway))
+
+(executable
+ (public_name order-server)
+ (name order_server)
+ (libraries lib_matching_engine))
